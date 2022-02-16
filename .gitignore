@@ -2,9 +2,6 @@
 .#*
 *#
 .DS_Store
-docs/*
-!docs/*.ipynb
-docs/_build
 .cache
 .coverage
 *.xml
