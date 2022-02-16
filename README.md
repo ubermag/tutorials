@@ -1,5 +1,7 @@
 # Notebooks to learn `ubermag`
 
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ubermag/tutorials/latest)
+
 ## First steps
 
 If you are new to `Ubermag` this is the correct place to start learning it.
