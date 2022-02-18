@@ -2,10 +2,13 @@
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ubermag/tutorials/latest)
 
-## First steps
+The [demo](demo.ipynb) notebooks shows a concise example - dynamics of a
+magnetic vortex - to demonstrate the main features of Ubermag.
+
+## Getting started
 
 If you are new to `Ubermag` this is the correct place to start learning it.
-The following set of tutorials will introduce all basic concepts of `Ubermag`
+This set of tutorials will introduce all basic concepts of `Ubermag`
 and its subpackages.
 
 ## How-To's
