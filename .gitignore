@@ -12,3 +12,7 @@ build/
 dist/
 *.egg-info/
 _autosummary/
+examples
+!examples/*.ipynb
+getting-started
+!getting-started/*.ipynb
