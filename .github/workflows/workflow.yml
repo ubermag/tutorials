@@ -27,4 +27,4 @@ jobs:
         environment-file: .github/environment.yml
 
     - name: Test notebooks
-      run: python -m pytest -v --nbval --sanitize-with nbval.cfg getting-started/*.ipynb demo.ipynb demo2.ipynb # examples/*.ipynb getting-started/*.ipynb
+      run: python -m pytest -W ignore::RuntimeWarning:zmq -v --nbval --sanitize-with nbval.cfg getting-started/*.ipynb demo.ipynb demo2.ipynb # examples/*.ipynb getting-started/*.ipynb
