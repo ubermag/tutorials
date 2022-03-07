@@ -31,4 +31,4 @@ jobs:
       run: python -m pip install --upgrade pip pytest-cov nbval
 
     - name: Test notebooks
-      run: python -m pytest -v --nbval --sanitize-with nbval.cfg demo.ipynb demo2.ipynb # examples/*.ipynb getting-started/*.ipynb
+      run: python -m pytest -v --nbval --sanitize-with nbval.cfg demo2.ipynb # examples/*.ipynb getting-started/*.ipynb
