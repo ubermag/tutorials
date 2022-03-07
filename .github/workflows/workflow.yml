@@ -26,5 +26,8 @@ jobs:
         activate-environment: conda-environment
         environment-file: .github/environment.yml
 
+    - name: Dummy python call to discretisedfield
+      run: python -c "import discretisedfield"
+
     - name: Test notebooks
       run: python -m pytest -W ignore::RuntimeWarning:zmq -v --nbval --sanitize-with nbval.cfg demo.ipynb demo2.ipynb # examples/*.ipynb getting-started/*.ipynb
