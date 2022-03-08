@@ -30,5 +30,14 @@ jobs:
     - name: Install testing packages
       run: python -m pip install --upgrade pip pytest-cov nbval
 
+    # The first import (of discretisedfield) on Windows produces a failure in the notebook tests
+    # (output mismatch) because of some (hidden) message on stderr (some IO error on Windows that
+    # does not seem to have an actual effect). By importing it once prior to the actual tests
+    # this can be circumvented.
+    # It appears to be package-independent (so just a problem with the first import statement).
+    # As we see the failure from a cell that imports discretisedfield we do the same import here.
+    - name: Import discretisedfield in python
+      run: python -c "import discretisedfield"
+
     - name: Test notebooks
       run: python -m pytest -v --nbval --sanitize-with nbval.cfg demo.ipynb examples/*.ipynb getting-started/*.ipynb
