@@ -38,7 +38,7 @@ jobs:
     # As we see the failure from a cell that imports discretisedfield we do the same import here.
     - name: Import discretisedfield in python
       run: python -c "import discretisedfield"
-      if: matrix.os == "windows-latest"
+      if: matrix.os == 'windows-latest'
 
     - name: Test notebooks
       run: python -m pytest -v --nbval --sanitize-with nbval.cfg demo.ipynb examples/*.ipynb getting-started/*.ipynb
