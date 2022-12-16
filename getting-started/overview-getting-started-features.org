@@ -1,0 +1,41 @@
+* Getting started
+
+Attempt to record which features are explained in which 'getting started'
+section.
+
+|                            |    |      first | Magnetisation |   energy | dynamics |
+|                            |    |    ubermag |         field | equation |          |
+|                            |    | simulation |               |          |          |
+|----------------------------+----+------------+---------------+----------+----------|
+| system set up              |  1 |          1 |               |          |          |
+| iv: const                  |  1 |          1 |               |          |          |
+| energy                     |  1 |          1 |               |          |          |
+| dyn: precession            |  1 |            |               |          |        1 |
+| dyn: damping               |  1 |            |               |          |        1 |
+| inspect system             |  1 |          1 |               |          |          |
+| plot region                |  1 |          1 |               |          |          |
+| plot mesh                  |  1 |          1 |               |          |          |
+| plot field                 |  1 |          1 |               |          |          |
+| et: zeemann                |  2 |          1 |               |        1 |          |
+| et: demag                  |  1 |          1 |               |          |          |
+| et: exchange               |  2 |          1 |               |        1 |          |
+| et: dmi                    |  1 |            |               |        1 |          |
+| minimization dr            |  2 |          1 |             1 |          |          |
+| time dr                    |  1 |            |               |          |        1 |
+| region                     |  1 |            |             1 |          |          |
+| visualise region           |  1 |            |             1 |          |          |
+| visualise mesh             |  1 |            |             1 |          |          |
+| init field: const          |  1 |            |             1 |          |          |
+| init field: norm           |  1 |            |             1 |          |          |
+| init field: function M     |  1 |            |             1 |          |          |
+| init field: function Ms    |  1 |            |             1 |          |          |
+| field(pos)                 |  1 |            |             1 |          |          |
+| uniaxial anisotropy (func) |  1 |            |               |        1 |          |
+| et: change parameter (D)   |  1 |            |               |        1 |          |
+| system.table               |  1 |            |               |          |        1 |
+| micromagnetic data         |  0 |            |               |          |          |
+| mag2exp                    |  0 |            |               |          |          |
+|                            |  0 |            |               |          |          |
+|----------------------------+----+------------+---------------+----------+----------|
+| #ERROR                     | 29 |         11 |             9 |        5 |        4 |
+#+TBLFM: $2=$3+$4+$5+$6::@>=vsum(@I..@II)
