@@ -4,6 +4,7 @@ on:
   push:
   schedule:
     - cron: '0 0 * * 1'  # run every Monday
+  workflow_dispatch:
 
 jobs:
   workflow:
