@@ -25,6 +25,9 @@ jobs:
         auto-update-conda: true
         activate-environment: conda-environment
         environment-file: .github/environment.yml
+        miniforge-version: latest
+        miniforge-variant: Mambaforge
+        use-mamba: true
 
     # The first import (of discretisedfield) on Windows produces a failure in the notebook tests
     # (output mismatch) because of some (hidden) message on stderr (some IO error on Windows that
