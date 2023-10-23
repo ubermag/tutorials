@@ -27,6 +27,9 @@ jobs:
         auto-update-conda: true
         activate-environment: conda-environment
         environment-file: binder/environment.yml
+        miniforge-version: latest
+        miniforge-variant: Mambaforge
+        use-mamba: true
 
     - name: Install testing packages
       run: python -m pip install --upgrade pip pytest-cov nbval
