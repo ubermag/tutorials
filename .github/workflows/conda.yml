@@ -5,6 +5,9 @@ on:
     - cron: '0 0 * * 1'  # run every Monday
   workflow_dispatch:
 
+env:
+  PYTEST_ADDOPTS: "--color=yes"
+
 jobs:
   conda:
     runs-on: ${{ matrix.os }}
