@@ -4,6 +4,10 @@ on:
   push:
   schedule:
     - cron: '0 0 * * 1'  # run every Monday
+  workflow_dispatch:
+
+env:
+  PYTEST_ADDOPTS: "--color=yes"
 
 jobs:
   workflow:
@@ -25,6 +29,9 @@ jobs:
         auto-update-conda: true
         activate-environment: conda-environment
         environment-file: .github/environment.yml
+        miniforge-version: latest
+        miniforge-variant: Mambaforge
+        use-mamba: true
 
     # The first import (of discretisedfield) on Windows produces a failure in the notebook tests
     # (output mismatch) because of some (hidden) message on stderr (some IO error on Windows that
