@@ -14,7 +14,12 @@ repos:
     # Run the linter.
     - id: ruff
       types_or: [python, pyi, jupyter]
-      args: [--fix, --exit-non-zero-on-fix, --extend-ignore, E999]
+      args: 
+        - --fix
+        - --exit-non-zero-on-fix
+        - --per-file-ignores
+        - getting-started/python-basics.ipynb:E999
+
     # Run the formatter.
     - id: ruff-format
       types_or: [python, pyi, jupyter]
