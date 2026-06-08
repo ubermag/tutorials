@@ -1,7 +1,10 @@
-name: workflow
+name: tests
 
 on:
   push:
+    branches:
+      - master
+  pull_request:
   schedule:
     - cron: '0 0 * * 1'  # run every Monday
   workflow_dispatch:
@@ -10,11 +13,11 @@ env:
   PYTEST_ADDOPTS: "--color=yes"
 
 jobs:
-  workflow:
+  tests:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [ubuntu-latest, macos-latest, windows-latest]
+        os: [ubuntu-latest, macos-26-intel, windows-latest]
     defaults:
       run:
         shell: bash -l {0}
@@ -24,14 +27,12 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Set up conda
-      uses: conda-incubator/setup-miniconda@v2
+      uses: conda-incubator/setup-miniconda@v3
       with:
+        python-version: 3.13
         auto-update-conda: true
         activate-environment: conda-environment
         environment-file: .github/environment.yml
-        miniforge-version: latest
-        miniforge-variant: Mambaforge
-        use-mamba: true
 
     # The first import (of discretisedfield) on Windows produces a failure in the notebook tests
     # (output mismatch) because of some (hidden) message on stderr (some IO error on Windows that
