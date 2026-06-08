@@ -17,8 +17,7 @@ repos:
       args: 
         - --fix
         - --exit-non-zero-on-fix
-        - --per-file-ignores
-        - getting-started/python-basics.ipynb:E999
+      exclude: getting-started/python-basics.ipynb
 
     # Run the formatter.
     - id: ruff-format
